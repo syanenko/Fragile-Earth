@@ -1,6 +1,5 @@
 #declare light_amount = 0.8;
 #include "playground.inc"
-#include "colors.inc"
 #include "colormaps.inc"
 
 // Axis
@@ -8,7 +7,8 @@
 
 // Cameras
 // camo (5,5,5,0,0,0,45)
-camp (2,1,2,0,-0.3,0,45)
+// camp (2,1,2,0,-0.3,0,45) // 1024x768
+camp (2.1,1.5,2.1,0,-0.42,0,45) // 1920x1080
 
 //
 // Colormaps
@@ -35,14 +35,14 @@ camp (2,1,2,0,-0.3,0,45)
 // Header
 //
 text {
-  ttf "Arial.ttf" "Global warming influence" 0.1, 0
+  ttf "Arial.ttf" "Global warming influence" 0.02, 0
   pigment {  gradient y
              color_map {hot}
              translate y * 0.6
              scale 3 }
   scale 0.2
-  rotate -y * 135
-  translate <-0.7,0.1,-2.3>
+  rotate <25,-135,0>
+  translate <-0.7,-0.56,-2.3>
 }
 
 //
@@ -50,21 +50,19 @@ text {
 //
 #declare year = 2000 + state * 17.24;
 #debug concat("----- Year: ", str(year,4,3), "\n")
-//#declare year_text = concat ("Year: ", str(year, 4, 0));
 #declare year_text = str(year, 4, 0);
 
 text {
-  ttf "Arial.ttf" year_text 0.1, 0
+  ttf "Arial.ttf" year_text 0.02, 0
 
   pigment {  gradient y
              color_map {jet}
-             translate -y * state * 0.22
+             translate -y * state * 0.20
              scale 2 }
   
   scale 0.13
-  rotate -y * 135
-  //translate <-0.7,-1.6,0.4>
-  translate <-0.7,-1.35,0.8>
+  rotate <30,-135,0>
+  translate <-0.7,-1.24,1>
 }
 
 intersection{
