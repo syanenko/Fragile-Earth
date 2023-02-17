@@ -1,4 +1,4 @@
-# Fragile earth
+# Fragile Earth
 
 POV-Ray animation illustrates height field interpretation as solid.\
 
