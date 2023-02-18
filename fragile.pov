@@ -5,33 +5,25 @@ global_settings { assumed_gamma 1 }
 #include "playground.inc"
 #include "colormaps.inc"
 
-// Axis
+//
+// Axis for debugging
+//
 // axis (1,0.5,1,0.008)
 
-// Cameras
-// camo (5,5,5,0,0,0,45)
-// camp (2,1,2,0,-0.3,0,45) // 1024x768
-camp (2.1,1.5,2.1,0,-0.42,0,45) // 1920x1080
+//
+// Perspective camera
+//
+camp (2.1,1.5,2.1,0,-0.42,0,45)
 
 //
 // Colormaps
 //
-#declare _f = 0;
-#declare _t = 0;
-#declare jet    = make_colormap (jet,    _f, _t);
-//#declare spring = make_colormap (spring, _f, _t);
-#declare hot    = make_colormap (hot,    _f, _t);
-//#declare winter = make_colormap (winter, _f, _t);
-#declare hsv    = make_colormap (hsv,    _f, _t);
-//#declare autumn = make_colormap (autumn, _f, _t);
-//#declare parula = make_colormap (parula, _f, _t);
-//#declare summer = make_colormap (summer, _f, _t);
-//#declare turbo  = make_colormap (turbo,  _f, _t);
-//#declare cool   = make_colormap (cool,   _f, _t);
+#declare jet = make_colormap (jet, 0, 0);
+#declare hot = make_colormap (hot, 0, 0);
+#declare hsv = make_colormap (hsv, 0, 0);
 
-// ---------------------------------------------------
-//
-// Objects 
+
+// Animation state
 #declare state = (abs(clock-1));
 
 //
@@ -68,25 +60,12 @@ text {
   translate <-0.7,-1.24,1>
 }
 
+
+//
+// Earth
+//
 intersection{
               
-/*
-  box{0.01, 0.99 
-  
-  pigment {  gradient y
-             color_map {hsv}
-             translate -y * 0.1
-             scale 0.6 }}
-*/
-
-/*
-  cylinder{<0.499, -0.07, 0.499> <0.499,1,0.499> 0.499 
-    pigment {  gradient y
-               color_map {hsv}
-               translate -y * 0.1
-               scale 0.6 }}
-*/
-
   // Sphere
   sphere{0,0.5 translate <0.50,-0.01,0.5>
     pigment {  gradient y
