@@ -1,4 +1,7 @@
-#declare light_amount = 0.8;
+#version 3.8;
+global_settings { assumed_gamma 1 }
+
+#declare luminosity = 0.8;
 #include "playground.inc"
 #include "colormaps.inc"
 
