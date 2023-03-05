@@ -19,3 +19,5 @@ Isosurfaces: [https://povlab.online/isotutorial/](https://povlab.online/isotutor
 Videos: [POV-Ray channel on Youtube](https://www.youtube.com/playlist?list=PL_L-Rlt-OWoJm6HN9t-hxXRk-b6SONXbJ)
 
 Contact me at [LinkedIn](https://www.linkedin.com/in/sergey-yanenko-57b21a96/).
+
+![image](https://user-images.githubusercontent.com/6688301/222982193-7233e312-059f-4744-a125-9f42422d0bb2.png)
